@@ -1,0 +1,245 @@
+:root{
+      /*Colors*/
+      --nav-bg: none;
+      --nav-color:white;
+      --nav-color-hover:rgba(255, 255, 255, 0.384);
+      --nav-gradient-top-right-color:rgba(8,196,230,1) 0%;
+      --nav-gradient-mid-color:rgba(8,196,230,1) 0%;
+      --nav-gradient-bot-left-color:rgba(103,6,209,1) 95%;
+
+      --h1-color:white;
+      
+      --purple-letter: rgb(111, 17, 211);
+
+      --title-line-color: black;
+      /*Typo*/
+      --root-font-size:16px;
+
+      --nav-items-font-size:1.3rem;
+
+      --main-title-font:"Krona One";
+      --h1-font-size: 6rem;
+      --h2-font-size: 4rem;
+      
+      --card-title-font-size: 2rem;
+
+      --project-title-font-size: 2rem;
+}
+
+*{
+      padding: 0;
+      margin: 0;
+}
+html{
+      font-family: Lato,Arial, Helvetica,sans-serif;
+      font-size: var(--root-font-size);
+}
+
+body{
+      max-width: 3840px;
+}
+
+/*--------HEADER-------*/
+header{
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-items: center;
+}
+#hero {
+      background: linear-gradient(217deg,
+      var(--nav-gradient-top-right-color),
+      var(--nav-gradient-mid-color),
+      var(--nav-gradient-bot-left-color));
+      height: 650px;
+      width: 100%;
+}
+#logo{
+      position: absolute;
+      align-self: center;
+      text-align: center;
+      width: 100%;
+}
+nav{
+      position: absolute;
+      width:100%;
+      background: var(--nav-bg);
+}
+nav ul.nav-container{
+      display: flex;
+      justify-content: flex-end;
+      width: 70%;
+      margin: 0 auto;
+}
+nav ul li{
+      list-style-type: none;
+      margin-right: 2em;
+      padding: 20px 0;
+}
+nav ul li a{
+      text-decoration: none;
+      font-size: var(--nav-items-font-size);
+      color: var(--nav-color);
+}
+nav ul li a:hover{
+      color: var(--nav-color-hover);
+      text-decoration: underline;
+}
+nav ul li a.active{
+      text-decoration: underline;
+}
+
+h1{
+      font-size: var(--h1-font-size);
+      text-align: center;
+      padding: 20px 0;
+      font-family: var(--main-title-font);
+      letter-spacing: 15px;
+      color: var(--h1-color);
+}
+
+/*-------MAIN-------*/
+img{
+      width: 100%;
+}
+
+.content-container{
+      max-width: 70%;
+      margin: 0 auto;
+}
+
+h2{
+      font-size: var(--h2-font-size);
+      margin-top: 1em;
+}
+.title-line{
+      width: 6vw;
+      background: var(--title-line-color);
+      height: 5px;
+      margin-bottom: 4em;
+}
+span.purple{
+      color: var(--purple-letter);
+}
+#cards{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content:center;
+}
+.card{
+      width: 300px;
+      box-shadow:0px 0px 15px -2px rgba(182, 182, 182, 0.664);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px;
+}
+.card-title{
+      font-size: var(--card-title-font-size);
+}
+.card hr{
+      margin: 20px 0;
+}
+.card p.footnote{
+      text-align: right;
+}
+
+
+/*ABOUT PAGE*/
+.col-2{
+      display: flex;
+      width: 100%;
+}
+
+.col-2-item{
+      width: 50%;
+      align-self: center;
+}
+
+.quote{
+      font-size: 2rem;
+      padding: 0 3em;
+      font-style: italic;
+}
+.quote-source{
+      font-style: italic;
+      padding: 1em 6em;
+}
+#projects{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+}
+.project{
+      max-width: 400px;
+      align-self: center;
+      margin: 20px;
+}
+.project img{
+      width: 100%;
+}
+.project h3{
+      margin:0.5em 0;
+      text-transform: uppercase;
+}
+.project ul li {
+      list-style: none;
+}
+.project ul li:before{
+      content:"- "
+}
+
+#drawings{
+      width: 100%;
+}
+.drawing{
+      display: inline-block;
+      width: 49.8%;
+}
+
+#photos{
+      width: 100%;
+}
+
+.photo{
+      display: inline-block;
+      width: 49.8%;
+}
+
+/*-------FOOTER------*/
+
+footer{
+      background: linear-gradient(317deg,
+      var(--nav-gradient-top-right-color),
+      var(--nav-gradient-mid-color),
+      var(--nav-gradient-bot-left-color));
+      width: 100%;
+      margin-top: 6em;
+      color: white;
+      padding: 2em 0 1em 0;
+}
+footer ul li{
+     list-style: none;
+     margin-bottom: 0.5em;
+}
+footer ul li a{
+      text-decoration: none;
+      color: var(--nav-color);
+}
+.col-3{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom:2em;
+}
+.col-3-item{
+      width: 30%;
+}
+.col-3-item h3{
+      margin-bottom: 1em;
+}
+p.footer-footnote{
+      text-align: center;
+      font-size: 0.7rem;
+}
