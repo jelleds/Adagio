@@ -1,6 +1,7 @@
 :root{
       /*Colors*/
       --nav-bg: none;
+      --nav-bg-mobile:rgba(255, 255, 255, 0.514);
       --nav-color:white;
       --nav-color-hover:rgba(255, 255, 255, 0.384);
       --nav-gradient-top-right-color:rgba(8,196,230,1) 0%;
@@ -128,7 +129,7 @@ span.purple{
       justify-content:center;
 }
 .card{
-      width: 300px;
+      width: 25%;
       box-shadow:0px 0px 15px -2px rgba(182, 182, 182, 0.664);
       padding: 20px;
       border-radius: 10px;
@@ -195,7 +196,7 @@ span.purple{
 }
 .drawing{
       display: inline-block;
-      width: 49.8%;
+      width: 49%;
 }
 
 #photos{
@@ -204,7 +205,7 @@ span.purple{
 
 .photo{
       display: inline-block;
-      width: 49.8%;
+      width: 49%;
 }
 
 /*-------FOOTER------*/
@@ -246,5 +247,110 @@ p.footer-footnote{
 
 
 @media screen and (max-width: 1440px) {
-     
-    }
+
+      .project{
+            max-width: 300px;
+      }
+
+      .drawing {
+            display: inline-block;
+      }
+
+}
+
+@media screen and (max-width: 1275px) {
+      :root{
+            --h2-font-size: 3rem;
+      }
+
+      .project{
+            max-width: 42%;
+      }
+
+      .quote {
+            font-size: 1.7rem;
+      }
+      .card{
+            width: 35%;
+      }
+}
+
+@media screen and (max-width: 1140px) {
+      :root{
+            --h2-font-size: 3rem;
+      }
+}
+
+@media screen and (max-width: 770px) {
+      :root{
+            --h1-font-size: 3rem;
+      }
+      .col-2 {
+            display: block;
+      }
+      .quote {
+            font-size: 2rem;
+            padding: 10px 0;
+      }
+      .quote-source {
+            font-style: italic;
+            padding: 0.5em 1em;
+      }
+      .col-2-item {
+            width: 100%;
+      }
+
+      .project{
+            max-width: 100%;
+      }
+      .card{
+            width: 100%;
+      }
+      .drawing, .photo{
+            width: 100%;
+      }
+      #logo{
+            margin-top: 35vh;
+      }
+      #hero{
+            margin-top: 38vh; 
+            height: 250px;
+      }
+      nav{
+            background: linear-gradient(217deg,
+            var(--nav-gradient-top-right-color),
+            var(--nav-gradient-mid-color),
+            var(--nav-gradient-bot-left-color));
+      }
+      nav ul.nav-container {
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+      }
+      .nav-mobile-bg{
+            position: absolute;
+            top: -37vh;
+            right: -22%;
+            width: 150%;
+            height: 90vh;
+            background: linear-gradient(217deg,
+            var(--nav-gradient-top-right-color),
+            var(--nav-gradient-mid-color),
+            var(--nav-gradient-bot-left-color));
+            border-radius: 50%;
+            display: none;
+      }
+
+
+      
+}
+
+@media screen and (max-width: 500px) {
+
+      #hero{
+            margin-top: 38vh; 
+      }
+
+}
+
+
