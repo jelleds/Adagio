@@ -13,6 +13,11 @@
       --purple-letter: rgb(111, 17, 211);
 
       --title-line-color: black;
+
+      --side-menu-background:linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.3113620448179272) 100%);
+      --side-menu-text-color:rgb(65, 65, 65);
+
+      --footer-text-color:white;
       /*Typo*/
       --root-font-size:16px;
 
@@ -20,7 +25,7 @@
 
       --main-title-font:"Krona One";
       --h1-font-size: 6rem;
-      --h2-font-size: 4rem;
+      --h2-font-size: 3.8rem;
       
       --card-title-font-size: 2rem;
 
@@ -126,7 +131,10 @@ img{
       width: 15%;
       margin-right: 20px;
       padding: 10px;
-      background: linear-gradient(90deg, rgba(244,244,244,1) 0%, rgba(244,244,244,0.3113620448179272) 100%);
+      background: var(--side-menu-background);
+}
+.side-menu ul li a{
+      color: var(--side-menu-text-color);
 }
 
 h2{
@@ -149,7 +157,7 @@ span.purple{
       justify-content:flex-start;
 }
 .card{
-      width: 10%;
+      width: 20%;
       box-shadow:0px 0px 15px -2px rgba(182, 182, 182, 0.664);
       padding: 20px;
       border-radius: 10px;
@@ -157,6 +165,7 @@ span.purple{
 }
 .card-title{
       font-size: var(--card-title-font-size);
+      margin-bottom: 10px;
 }
 .card hr{
       margin: 20px 0;
@@ -237,7 +246,7 @@ footer{
       var(--nav-gradient-bot-left-color));
       width: 100%;
       margin-top: 6em;
-      color: white;
+      color: var(--footer-text-color);
       padding: 2em 0 1em 0;
 }
 footer ul li{
@@ -254,9 +263,6 @@ footer ul li a{
       justify-content: space-between;
       margin-bottom:2em;
 }
-.col-3-item{
-      
-}
 .col-3-item h3{
       margin-bottom: 1em;
 }
@@ -267,9 +273,7 @@ p.footer-footnote{
 }
 @media screen and (min-width: 1440px) {
 
-      .card{
-            width: 200px;
-      }
+     
 
       .drawing {
             display: inline-block;
@@ -280,7 +284,7 @@ p.footer-footnote{
 @media screen and (max-width: 1440px) {
 
       .project{
-            max-width: 300px;
+            max-width: 28%;
       }
 
       .drawing {
@@ -294,16 +298,10 @@ p.footer-footnote{
             --h2-font-size: 3rem;
       }
 
-      .project{
-            max-width: 42%;
-      }
-
       .quote {
             font-size: 1.7rem;
       }
-      .card{
-            width: 35%;
-      }
+     
       .content-container{
             max-width: 80%;
             margin: 0 auto;
@@ -324,6 +322,11 @@ p.footer-footnote{
             --h2-font-size: 3rem;
       }
 }
+@media screen and (max-width: 1000px) {
+      .project{
+            max-width: 42%;
+      }
+}
 
 @media screen and (max-width: 770px) {
       :root{
@@ -336,6 +339,9 @@ p.footer-footnote{
             font-size: 2rem;
             padding: 10px 0;
       }
+      .card{
+            width: 30%;
+      }
       .quote-source {
             font-style: italic;
             padding: 0.5em 1em;
@@ -347,18 +353,11 @@ p.footer-footnote{
       .project{
             max-width: 100%;
       }
-      .card{
-            width: 100%;
-      }
       .drawing, .photo{
             width: 100%;
       }
       #logo{
-            margin-top: 35vh;
-      }
-      #hero{
-            margin-top: 38vh; 
-            height: 250px;
+            margin-top: 280px;
       }
       nav{
             background: linear-gradient(217deg,
@@ -384,20 +383,36 @@ p.footer-footnote{
             border-radius: 50%;
             display: none;
       }
+      .title-line{
+            width: 10vw;     
+      }
+      
 
 }
 
 @media screen and (max-width: 500px) {
 
-      #hero{
-            margin-top: 38vh; 
-      }
       .col-3{
             display: block;
             text-align:center;
       }
+      .card{
+            width: 100%;
+      }
       .col-3-item{
             margin-bottom: 35px;
+      }
+      .title-line{
+            width: 20vw;
+            
+      }
+
+}
+
+@media screen and (max-width: 300px) {
+
+      h1{
+            font-size: 2rem ;
       }
 
 }
